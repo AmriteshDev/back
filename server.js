@@ -1,6 +1,15 @@
 const app = require("./app");
 
 const dotenv = require("dotenv");
+const cors = require('cors');
+
+app.use(cors(
+    {
+        origin: ["https://english-to-french-translator.vercel.app/"],
+        methods: ["POST", "GET"],
+        credentials: true
+    }
+));
 
 // Config
 
